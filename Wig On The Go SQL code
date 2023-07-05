@@ -1,0 +1,339 @@
+
+/* 1*/
+CREATE TABLE SUPPLIER_T
+  ( Supplier_ID		    NUMERIC (10) ,
+    Name		    VARCHAR(80) NOT NULL,
+    Website		  VARCHAR(80) NOT NULL,
+    Email       VARCHAR(80) NOT NULL,
+    Quantity    NUMERIC(12) NOT NULL,
+    Phone       VARCHAR(30) NOT NULL,
+    Country     VARCHAR(12) NOT NULL,
+    CONSTRAINT PK_SUPPLIER_T PRIMARY KEY (Supplier_ID));
+
+    INSERT INTO SUPPLIER_T VALUES
+        ( 1, 'Hefei Zhongmai Trade Co.,Ltd', 'zimi.en.alibaba.com','mps@testmail.com', 10, '+86 417 555 0166', 'China');
+    INSERT INTO SUPPLIER_T VALUES
+      	( 2, 'DH Gate','dhgate.com', 'artscentralmass@nomail.com', 10, '+86 508 332 3432', 'China');
+    INSERT INTO SUPPLIER_T VALUES
+      	( 3, 'Sounds of Sacramento','SoundsOfSacramentoHello.com', 'sosac@mailmail.com', 10, '+1 913 448 3382', 'U.S.A.');
+    INSERT INTO SUPPLIER_T VALUES
+      	( 4, 'Rhode Island Arts Central', 'riac_info@riac.com', 'riac_in.com',10, '+1 344 445 3443','U.S.A.');
+    INSERT INTO SUPPLIER_T VALUES
+      	( 5, 'Vermonts Arts Collaborative','VermontArts.com', 'VermontArts@vac.com',10,'+1 802 349 5549', 'U.S.A.');
+    INSERT INTO SUPPLIER_T VALUES
+      	( 6, 'Albany at Five', 'AaF@Albany.ny.us','AaF@Albany@hotmail.com', 10, '+1 518 434 2032', 'U.S.A.');
+    INSERT INTO SUPPLIER_T VALUES
+      	( 7, 'Bushnell Concert Series', 'BushnellConcerts.com','BushnellConcerts@fakemail.com',10, '+1 518 465 4663', 'U.S.A.');
+    INSERT INTO SUPPLIER_T VALUES
+        ( 8, 'Changge Elegant Hair Products Co., Ltd.', 'ehairworld.com', 'info@ehairworld.com', 10,'+86 137-823-55779', 'China');
+    INSERT INTO SUPPLIER_T VALUES
+        ( 9, 'Guangzhou Hongye Import & Export Co., Ltd.', 'https://www.hywig.com/indexw.html','hywig@gmail.com' ,10, '+86 20 837 09333', 'China');
+    INSERT INTO SUPPLIER_T VALUES
+        ( 10, 'Guangzhou Hua Si Trading Co., Ltd.', 'www.alinybeauty.com','alinybeauty@gmail.com', 10,'+1 899 844 5439', 'U.S.A.');
+    INSERT INTO SUPPLIER_T VALUES
+        ( 11, 'Xuchang Kyra Products Co., Ltd.', 'http://www.kyraproducts.com/', 'kyraproducts.com@gmail.com',10, '+86 156 3745 5789', 'China');
+    INSERT INTO SUPPLIER_T VALUES
+        ( 12, 'Henan Shenlong Hair Products Co.,LTD.', 'www.shenlonghair.com','cocktailhair@outlook.com',10, '+86 158 365 73007', 'China');
+    INSERT INTO SUPPLIER_T VALUES
+        ( 13, 'Belle beauty hair','bellebeautyhair.com/', 'info@bellewigs.com',10, '+86 532 8496 0338', 'China');
+    INSERT INTO SUPPLIER_T VALUES
+        ( 14, 'https://www.eminenthair.com/', 'www.eminenthair.com', 'info@eminenthair.com', 10,'+86 185 616 28652', 'China');
+    INSERT INTO SUPPLIER_T VALUES
+        ( 15, 'New Times Hairs', 'newtimeshair.com','nfo@newtimeshair.com',10,'+86 532 889 94028','China');
+
+    /* 2 */
+
+CREATE TABLE ORDER_DETAILS
+( Order_Details_ID  NUMERIC(25) NOT NULL,
+  Product_ID        VARCHAR(25) NOT NULL,
+  Order_ID          VARCHAR(25) NOT NULL,
+  All_products_Name	  VARCHAR(80) NOT NULL,
+  Quantity_supplied   NUMERIC(25) NOT NULL,
+  Unit_Price          NUMERIC(30) NOT NULL,
+  Total             NUMERIC(30) NOT NULL,
+  Order_Date        VARCHAR(50) NOT NULL,
+  Delivery_Date     VARCHAR(50) NOT NULL,
+  CONSTRAINT PK_ORDER_DETAILS PRIMARY KEY(Order_Details_ID));
+
+  INSERT INTO ORDER_DETAILS VALUES
+  (1,  '0001','01','Long Black wig',                                                 10,100,1000,'12/1/2020','12/15/2020');
+  INSERT INTO ORDER_DETAILS VALUES
+  (2, '0002', '02','Lace Front Wigs Human Hair 30 inch Staright',                    10, 110, 1100, '12/2/2020','12/16/2020');
+  INSERT INTO ORDER_DETAILS VALUES
+  (3,  '0003','03','Pastel Wavy Wig With Air Bangs',                                 10,125,1250,'12/3/2020','12/17/2020');
+  INSERT INTO ORDER_DETAILS VALUES
+  (4,  '0004','04','Ombre Color 4/27 Lace Front Wigs Human Hair For Women Short Bob',10,130,1300,'12/4/2020','12/18/2020');
+  INSERT INTO ORDER_DETAILS VALUES
+  (5,  '0005','05','Long Curly Hair Ends Costume Cosplay Wig',                       10,140,1400,'12/5/2020','12/17/2020');
+  INSERT INTO ORDER_DETAILS VALUES
+  (6,  '0006','06','Lativ Long Wavy Wig Ombre Platinum Blonde Wigs',                 10,150,1500,'12/6/2020','12/18/2020');
+  INSERT INTO ORDER_DETAILS VALUES
+  (7,  '0007','07','Short Pixie Cut Wigs',                                           10,90,900,'12/7/2020','12/19/2020');
+  INSERT INTO ORDER_DETAILS VALUES
+  (8,  '0008','08','Brazilian Deep Curly Human Hair',                                10,160,1600,'12/8/2020','12/20/2020');
+  INSERT INTO ORDER_DETAILS VALUES
+  (9,  '0009','01','Long Fluffy Curly Wavy Hair',                                    10,170,1700,'12/9/2020','12/21/2020');
+  INSERT INTO ORDER_DETAILS VALUES
+  (10, '0010','10','Straight Bob Wigs Brazilian Virgin Human Hair',                  10,180,1800,'12/10/2020','12/22/2020');
+  INSERT INTO ORDER_DETAILS VALUES
+  (11, '0011','11','Ombre Wig with Bangs Dark Blonde Wig',                           10,90,900,'12/11/2020','12/23/2020');
+  INSERT INTO ORDER_DETAILS VALUES
+  (12, '0012','12','Short Blonde Wigs for White Women',                              10,90,900,'12/12/2020','12/24/2020');
+  INSERT INTO ORDER_DETAILS VALUES
+  (13, '0013','13','Body Wave Lace Front Wig Human Hair',                            10,120,1200,'12/13/2020','12/25/2020');
+  INSERT INTO ORDER_DETAILS VALUES
+  (14, '0014','14','LBLY Highlight Human Hair Lace Front Wigs',                      10,130,1300,'12/14/2020','12/26/2020');
+  INSERT INTO ORDER_DETAILS VALUES
+  (15, '0015','15','Plucked Hairline 180% Density Brazilian Body Wave Lace',         10,155,1550,'12/15/2020','12/27/2020');
+
+/* 3 */
+CREATE TABLE INVENTORY_T
+  ( InventoryID		    NUMERIC(12)    NOT NULL,
+    Product_Name		  VARCHAR(80)  NOT NULL,
+    Product_Color VARCHAR(25)  NOT NULL,
+    Unit_Amount  NUMERIC(12) NOT NULL,
+    Supplier_ID  NUMERIC(12) NOT NULL,
+    Price  NUMERIC(12) NOT NULL,
+    CONSTRAINT PK_INVENTORY_T PRIMARY KEY (InventoryID));
+
+    INSERT INTO INVENTORY_T VALUES
+      ( 1, 'Long Black wig','Black',10,0001,100);
+    INSERT INTO INVENTORY_T VALUES
+      ( 2, 'Lace Front Wigs Human Hair 30 inch Straight','Black',10,0002,101);
+    INSERT INTO INVENTORY_T VALUES
+      ( 3, 'Pastel Wavy Wig With Air Bangs','Pastel',10,0003,102);
+    INSERT INTO INVENTORY_T VALUES
+      ( 4, 'Ombre Color 4/27 Lace Front Wigs Human Hair For Women Short Bob','Ombre',10,0004,103);
+    INSERT INTO INVENTORY_T VALUES
+      ( 5, 'Long Curly Hair Ends Costume Cosplay Wig','Black',10,0005,104);
+    INSERT INTO INVENTORY_T VALUES
+      ( 6, 'Lativ Long Wavy Wig Ombre Platinum Blonde Wigs','Platinum',10,0006,105);
+    INSERT INTO INVENTORY_T VALUES
+      ( 7, 'Short Pixie Cut Wigs ','Black',10,0007,106);
+    INSERT INTO INVENTORY_T VALUES
+      ( 8, 'Brazilian Deep Curly Human Hair','Blonde',10,0008,107);
+    INSERT INTO INVENTORY_T VALUES
+      ( 9, 'Long Fluffy Curly Wavy Hair','Pink',10,0009,108);
+    INSERT INTO INVENTORY_T VALUES
+      ( 10, 'Straight Bob Wigs Brazilian Virgin Human Hair','Black',10,0010,109);
+    INSERT INTO INVENTORY_T VALUES
+      ( 11, 'Ombre Wig with Bangs Dark Blonde Wig','Ombre',10,0011,110);
+    INSERT INTO INVENTORY_T VALUES
+      ( 12, 'Short Blonde Wigs for White Women','Blonde',10,0012,111);
+    INSERT INTO INVENTORY_T VALUES
+      ( 13, 'Body Wave Lace Front Wig Human Hair','Brown',10,0013,112);
+    INSERT INTO INVENTORY_T VALUES
+      ( 14, 'LBLY Highlight Human Hair Lace Front Wigs','highlight Blonde',10,0014,113);
+    INSERT INTO INVENTORY_T VALUES
+      ( 15, 'Plucked Hairline 180% Density Brazilian Body Wave Lace','Black',10,0015,114);
+
+/* 4 */
+CREATE TABLE CUSTOMERS_T
+ (Customer_ID NUMERIC(12) NOT NULL,
+  First_Name  VARCHAR(25) NOT NULL,
+  Last_Name VARCHAR (25) NOT NULL,
+  Order_ID VARCHAR(25)  NOT NULL,
+  Address VARCHAR(50)  NOT NULL,
+  Phone VARCHAR(15)  NOT NULL,
+  Price NUMERIC(12)  NOT NULL,
+  CONSTRAINT PK_CUSTOMERS_T PRIMARY KEY (Customer_ID)); 
+
+
+INSERT INTO CUSTOMERS_T VALUES
+(1, 'leila', 'Wilson', '01','100 Manchester rd Apt 9 Silver Spring MD 20901','240 713 2345', 100 );
+INSERT INTO CUSTOMERS_T VALUES
+(2, 'Janet', 'Baker', '02','65 Raster rd Silver Spring MD 20901', '246 363 2345' , 110 );
+INSERT INTO CUSTOMERS_T VALUES
+(3, 'Darena', 'Kirk', '03','Miles St  Takoma Park MD 20910', '240 713 2345' , 125 );
+INSERT INTO CUSTOMERS_T VALUES
+(4, 'Sophie', 'Meedows', '04','7 Wayne Ave.  Silver Spring MD 20901', '301 713 2345' , 130 );
+INSERT INTO CUSTOMERS_T VALUES
+(5, 'Ravi ', 'Patel', '05','Robert St Parkway Silver Spring MD 20910', ' 207 443 9498' , 140 );
+INSERT INTO CUSTOMERS_T VALUES
+(6, 'Daisy', 'Roger ', '06','9066 Washington Ave. Wheaton, IL 60187', ' 979 823 6383' , 150 );
+INSERT INTO CUSTOMERS_T VALUES
+(7, 'Tamy', 'Robert', '07','7071 Riverview Lane Dorchester Center, MA 02124', '202 764 5445' , 90 );
+INSERT INTO CUSTOMERS_T VALUES
+(8, 'Bretta', 'Akers', '08','56 East Franklin Drive Vernon Rockville, CT 06066', '202 240 7135' , 160 );
+INSERT INTO CUSTOMERS_T VALUES
+(9, 'John', 'Deakin', '09','4 10th Road Dedham, MA 02026', '240 713 2345' , 170 );
+INSERT INTO CUSTOMERS_T VALUES
+(10, 'Celia', 'Fisher', '10','215 10th St Pocomoke City, MD 21851', '410 957 4471' , 180 );
+INSERT INTO CUSTOMERS_T VALUES
+(11, 'Sally', 'Bollywood ', '11','3791 Crowell Rd Turlock, CA 95382', '209 656 6928' , 90 );
+INSERT INTO CUSTOMERS_T VALUES
+(12, 'Jane', 'Carter', '12','209 Pine St #A Columbia, CT 06237', '860 228 0838' , 90 );
+INSERT INTO CUSTOMERS_T VALUES
+(13, 'Paulette', 'Harris', '13','9640 S 6th St Schoolcraft, MI, 49087', '267 520 2389' , 120 );
+INSERT INTO CUSTOMERS_T VALUES
+(14, 'Rachael', 'Patel', '14','885 Dallas 326 Leola, AR 72084', '870 254 2769' , 130 );
+INSERT INTO CUSTOMERS_T VALUES
+(15, 'Lace', 'Wills', '15','29 Christmas Mountain Rd #R Bartlett, NH 03812', '207 443 9498' , 155 );
+
+
+/* 5 */
+
+CREATE TABLE  CUSTOMER_ORDER_T
+(Customer_Order_ID NUMERIC(12) NOT NULL,
+Date_of_order VARCHAR(25),
+Product_Name VARCHAR (80),
+Customer_ID VARCHAR (25),
+CONSTRAINT PK_CUSTOMER_ORDER_T PRIMARY KEY (Customer_Order_ID));
+
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(1,'01/01/2021','long Black Wig', 1);
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(2,'01/04/2021','Lace Front Wigs Human Hair 30 inch Straight', 2);
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(3,'01/06/2021','Pastel Wavy Wig With Air Bangs', 3);
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(4,'01/08/2021','Ombre Color 4/27 Lace Front Wigs Human Hair For Women Short Bob', 4);
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(5,'01/10/2021','Long Curly Hair Ends Costume Cosplay Wig', 5);
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(6,'01/12/2021','Lativ Long Wavy Wig Ombre Platinum Blonde Wigs', 6);
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(7,'01/14/2021','Short Pixie Cut Wigs', 7);
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(8,'01/16/2021','Brazilian Deep Curly Human Hair', 8);
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(9,'01/18/2021','Long Fluffy Curly Wavy Hair', 9);
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(10,'01/20/2021','Straight Bob Wigs Brazilian Virgin Human Hair', 10);
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(11,'01/22/2021','Ombre Wig with Bangs Dark Blonde Wig', 11);
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(12,'01/24/2021','Short Blonde Wigs for White Women', 12);
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(13,'01/26/2021','Body Wave Lace Front Wig Human Hair', 13);
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(14,'01/28/2021','LBLY Highlight Human Hair Lace Front Wigs', 14);
+INSERT INTO CUSTOMER_ORDER_T VALUES
+(15,'01/30/2021','Plucked Hairline 180% Density Brazilian Body Wave Lace', 15);
+
+
+/* 6 */
+
+CREATE TABLE PAYMENT_T
+(Payment_ID  NUMERIC(12) NOT NULL,
+First_Name	 VARCHAR(25)  NOT NULL,
+Last_Name    VARCHAR(25)  NOT NULL,
+Bill_number  NUMERIC (12) NOT NULL,
+Payment_type VARCHAR (25) NOT NULL,
+Order_ID     VARCHAR (25) NOT NULL,
+CONSTRAINT PK_PAYMENT_T PRIMARY KEY (Payment_ID));
+
+INSERT INTO PAYMENT_T VALUES
+(1,'leila', 'Wilson', 089340, 'Credit cart', '01');
+INSERT INTO PAYMENT_T VALUES
+(2,'Janet', 'Baker', 089341, 'Credit cart', '02');
+INSERT INTO PAYMENT_T VALUES
+(3,'Darena', 'Kirk', 089342, 'Paypal', '03');
+INSERT INTO PAYMENT_T VALUES
+(4,'Sophie', 'Meedows', 089343, 'Debit cart', '04');
+INSERT INTO PAYMENT_T VALUES
+(5,'Ravi ', 'Patel', 089344, 'Credit cart', '05');
+INSERT INTO PAYMENT_T VALUES
+(6,'Daisy', 'Roger ', 089345, 'Paypal', '06');
+INSERT INTO PAYMENT_T VALUES
+(7,'Tamy', 'Robert', 089346, 'Paypal', '07');
+INSERT INTO PAYMENT_T VALUES
+(8,'Bretta', 'Akers', 089347, 'Debit cart', '08');
+INSERT INTO PAYMENT_T VALUES
+(9,'John', 'Deakin', 089348, 'Debit cart', '09');
+INSERT INTO PAYMENT_T VALUES
+(10,'Celia', 'Fisher', 089349, 'Credit cart', '10');
+INSERT INTO PAYMENT_T VALUES
+(11,'Sally', 'Bollywood ', 089350, 'Credit cart', '11');
+INSERT INTO PAYMENT_T VALUES
+(12,'Jane', 'Carter', 089351, 'Paypal', '12');
+INSERT INTO PAYMENT_T VALUES
+(13,'Paulette', 'Harris', 089352, 'Debit cart', '13');
+INSERT INTO PAYMENT_T VALUES
+(14,'Rachael', 'Patel', 089353, 'Credit cart', '14');
+INSERT INTO PAYMENT_T VALUES
+(15,'Lace', 'Wills', 089354, 'Debit cart', '15');
+
+
+/* 7 */
+
+CREATE TABLE DELIVERY_T
+(Delivery_ID NUMERIC(12) NOT NULL,
+First_Name	 VARCHAR(25)  NOT NULL,
+Last_Name    VARCHAR(25)  NOT NULL,
+Date_of_pick_up VARCHAR (25) NOT NULL,
+Date_Delivered VARCHAR (25) NOT NULL,
+CONSTRAINT PK_DELIVERY_T PRIMARY KEY (DELIVERY_ID));
+
+INSERT INTO DELIVERY_T VALUES
+(1, 'leila', 'Wilson','01/01/2021', ' 01/03/2021');
+INSERT INTO DELIVERY_T VALUES
+(2, 'Janet', 'Baker','01/04/2021', ' 01/05/2021');
+INSERT INTO DELIVERY_T VALUES
+(3, 'Darena', 'Kirk','01/06/2021', ' 01/07/2021');
+INSERT INTO DELIVERY_T VALUES
+(4, 'Sophie', 'Meedows','01/08/2021', ' 01/09/2021');
+INSERT INTO DELIVERY_T VALUES
+(5, 'Ravi ', 'Patel','01/10/2021', ' 01/11/2021');
+INSERT INTO DELIVERY_T VALUES
+(6, 'Daisy', 'Roger ','01/12/2021', ' 01/13/2021');
+INSERT INTO DELIVERY_T VALUES
+(7, 'Tamy', 'Robert','01/14/2021', ' 01/15/2021');
+INSERT INTO DELIVERY_T VALUES
+(8,'Bretta', 'Akers', '01/16/2021', ' 01/17/2021');
+INSERT INTO DELIVERY_T VALUES
+(9,'John', 'Deakin', '01/18/2021', ' 01/19/2021');
+INSERT INTO DELIVERY_T VALUES
+(10, 'Celia', 'Fisher','01/20/2021', ' 01/21/2021');
+INSERT INTO DELIVERY_T VALUES
+(11, 'Sally', 'Bollywood ','01/22/2021', ' 01/23/2021');
+INSERT INTO DELIVERY_T VALUES
+(12, 'Paulette', 'Harris', '01/24/2021', ' 01/25/2021');
+INSERT INTO DELIVERY_T VALUES
+(13, 'Paulette', 'Harris','01/26/2021', ' 01/27/2021');
+INSERT INTO DELIVERY_T VALUES
+(14, 'Rachael', 'Patel','01/28/2021', ' 01/29/2021');
+INSERT INTO DELIVERY_T VALUES
+(15,'Lace', 'Wills', '01/30/2021', ' 02/01/2021');
+
+
+
+/* 8 */
+
+CREATE TABLE SURVEY_T
+(Survey_ID NUMERIC(12) NOT NULL,
+  Comments VARCHAR (150) NOT NULL,
+  Rating   VARCHAR (25) NOT NULL,
+CONSTRAINT PK_SURVEY_T PRIMARY KEY (SURVEY_ID));
+
+INSERT INTO SURVEY_T VALUES
+(1, 'I love how the website is setted.', "5/5");
+INSERT INTO SURVEY_T VALUES
+(2, 'I wish the product came earlier that that!', "3/5");
+INSERT INTO SURVEY_T VALUES
+(3, 'Good quality product overall', "4/5");
+INSERT INTO SURVEY_T VALUES
+(4, ' Not bad at all, could be thicker but that can be fixed. Closure was decent. It bleached and plucked well. I will reorder.', "5/5");
+INSERT INTO SURVEY_T VALUES
+(5, 'This is my first closure wig and I am new to the customization process but I like this unit a lot.', "5/5");
+INSERT INTO SURVEY_T VALUES
+(6, 'To thin and not true to length, also it’s super darker then the normal natural color one person found this helpful', "2/5");
+INSERT INTO SURVEY_T VALUES
+(7, 'Hair thin and Soft .. thin like a bad perm would need to hair two bundles.. not at all the wig I’m the picture.. I am very disappointed .', "1/5");
+INSERT INTO SURVEY_T VALUES
+(8, 'Hair was nice , I thought it was really thin at first but I washed and blow dried it and I like it.', "5/5");
+INSERT INTO SURVEY_T VALUES
+(9, 'This Wig has a closure, hair is beautiful i have no complaints at all and is true in length.', "5/5");
+INSERT INTO SURVEY_T VALUES
+(10, 'Hair is very soft light weight definitely a good wig if you wanted to just try for the first time easy to  manage nothing over the top.', "4/5");
+INSERT INTO SURVEY_T VALUES
+(11, 'So at first I was skeptical about buying this wig. But based on the reviews I did see i went ahead and purchased.', "5/5");
+INSERT INTO SURVEY_T VALUES
+(12, ' Unfortunately this wig was not constructed very well and I did not even know how to wear it, but I ended up doing a side part and its working.', "1/5");
+INSERT INTO SURVEY_T VALUES
+(13, 'This was the first ever. I had been sticking with synthetic ones since the price of human hair ones scared me a bit.', "4/5");
+INSERT INTO SURVEY_T VALUES
+(14, 'I can’t. It is so thin you can see the cap from every direction. I bought this for my daughter to wear to school (8th grade), and she cried.', "2/5");
+INSERT INTO SURVEY_T VALUES
+(15, 'I love the hair but hate the lace part. This T part the knots were to big to pluck.', "3/5");
+
